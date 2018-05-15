@@ -10,17 +10,15 @@
 	<build>
 		<plugins>
 			<plugin>
-			<artifactId>maven-jar-plugin</artifactId>
+				<artifactId>maven-jar-plugin</artifactId>
 				<version>2.3</version>
 				<configuration>
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<mainClass>de.patrick.App</mainClass>
-							<!-- classpathPrefix>lib/</classpathPrefix>
-							< classpathLayoutType>repository</classpathLayoutType-->
-							<!-- classpathLayoutType>custom</classpathLayoutType>
-							<customClasspathLayout>WEB-INF/lib/${artifact.groupIdPath}/${artifact.artifactId}-${artifact.version}${dashClassifier?}.${artifact.extension}</customClasspathLayout-->
+							<!-- classpathPrefix>lib/</classpathPrefix> < classpathLayoutType>repository</classpathLayoutType -->
+							<!-- classpathLayoutType>custom</classpathLayoutType> <customClasspathLayout>WEB-INF/lib/${artifact.groupIdPath}/${artifact.artifactId}-${artifact.version}${dashClassifier?}.${artifact.extension}</customClasspathLayout -->
 
 						</manifest>
 					</archive>
@@ -29,11 +27,21 @@
 			</plugin>
 		</plugins>
 	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<artifactId>maven-javadoc-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</reporting>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

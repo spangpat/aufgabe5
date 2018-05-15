@@ -4,10 +4,11 @@ import java.util.Scanner;
 
 /**
  * Hello world!
- *
+ *Author Patrick Spang
  */
 public class App 
 {
+	///Main Methode zum starten des Programms
     public static void main( String[] args )
     {
         System.out.println( "Groﬂbuchstaben eingeben:" );
